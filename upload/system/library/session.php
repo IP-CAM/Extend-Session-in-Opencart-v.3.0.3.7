@@ -57,9 +57,9 @@ class Session {
 	public function start($session_id = '') {
 		if (!$session_id) {
 			if (function_exists('random_bytes')) {
-				$session_id = substr(bin2hex(random_bytes(26)), 0, 26);
+				$session_id = substr(bin2hex(random_bytes(40)), 0, 40);
 			} else {
-				$session_id = substr(bin2hex(openssl_random_pseudo_bytes(26)), 0, 26);
+				$session_id = substr(bin2hex(openssl_random_pseudo_bytes(40)), 0, 40);
 			}
 		}
 

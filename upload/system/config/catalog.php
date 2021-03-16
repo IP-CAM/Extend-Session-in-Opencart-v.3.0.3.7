@@ -19,6 +19,7 @@ $_['db_port']            = DB_PORT;
 $_['session_autostart']  = false;
 $_['session_engine']     = 'db';
 $_['session_name']       = 'OCSESSID';
+$_['session_lifetime']	 = 60 * 60 * 12; // 12 hours
 
 // Template
 $_['template_engine']    = 'twig';
