@@ -280,7 +280,7 @@ CREATE TABLE `oc_cart` (
   `cart_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
   `api_id` int(11) NOT NULL,
   `customer_id` int(11) NOT NULL,
-  `session_id` varchar(32) NOT NULL,
+  `session_id` varchar(48) NOT NULL,
   `product_id` int(11) NOT NULL,
   `recurring_id` int(11) NOT NULL,
   `option` text NOT NULL,
@@ -3316,7 +3316,7 @@ INSERT INTO `oc_statistics` (`statistics_id`, `code`, `value`) VALUES
 
 DROP TABLE IF EXISTS `oc_session`;
 CREATE TABLE `oc_session` (
-  `session_id` varchar(32) NOT NULL,
+  `session_id` varchar(48) NOT NULL,
   `data` text NOT NULL,
   `expire` datetime NOT NULL,
   PRIMARY KEY (`session_id`)
